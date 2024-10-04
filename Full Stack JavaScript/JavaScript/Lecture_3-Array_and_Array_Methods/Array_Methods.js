@@ -37,3 +37,9 @@ console.log(arr);
 // console.log(arr.shift());
 arr.shift();
 console.log(arr);
+
+// slice --> If you want to access some part of it (arg1(from start), arg2(to end-1))
+console.log(arr.slice(1,4)); // 1,2,3     excluded - 4
+
+// splice
+console.log()
