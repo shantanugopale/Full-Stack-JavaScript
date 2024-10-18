@@ -112,6 +112,7 @@ const obj5 = {
     },
 }
 
+// console.log(obj5)
 console.log(obj5.printAComic())
 console.log(obj5.printBComic())
 
