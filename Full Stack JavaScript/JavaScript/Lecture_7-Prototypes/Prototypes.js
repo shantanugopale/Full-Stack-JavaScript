@@ -32,16 +32,25 @@ const Teacher = {
 }
 
 const TeachingSupport = {
-    isAvailable : false
+    isAvailable: false
 }
 
 const TSAssistant = {
-    makeAssignment : 'JS Assignment',
+    makeAssignment: 'JS Assignment',
     fullTime: true,
 
     //Injecting the Properties inside the Object of Another Object by Using __proto__and It's an Old Way
-    __proto__: TeachingSupport  
+    __proto__: TeachingSupport  // --> Old Syntax
 }
 
 Teacher.__proto__ = User
 
+// Modern Synax
+
+Object.setPrototypeOf(TeachingSupport, Teacher) // Not connected the Correct Prototypal Chain need to Check again
+
+// ---->>>> Goal : Get truelength() of a String <<<<------//
+
+String.prototype.truelength = function () {
+    console.log(`True Length is : ${this.trim().length}`);
+}
